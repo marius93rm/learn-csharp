@@ -8,6 +8,7 @@ Materiale completo per studiare e insegnare **C#**: slide, compendi, esercizi gu
 * `esercizi/` — raccolta di esercizi a difficoltà crescente.
 
   * `PomodoroExercise/` — esercizio su SOLID, repository/persistenza e test.
+  * `AsyncAwaitDashboard/` — dashboard asincrona con `Task`, `async/await`, cancellazione e stream.
   * *(altri esercizi verranno aggiunti qui con la stessa struttura)*
 * `Compendio Pomodoro C#.pdf` — compendio teorico+pratico d’esempio.
 * `README.md` — questo file.
@@ -61,6 +62,10 @@ Materiale completo per studiare e insegnare **C#**: slide, compendi, esercizi gu
 * **PomodoroExercise**
   Focus su: SRP/OCP/ISP/DIP, repository CSV, notifiche, xUnit.
   Path: `esercizi/PomodoroExercise/` (leggi il README dentro la cartella).
+
+* **AsyncAwaitDashboard**
+  Focus su: `async`/`await`, `Task.WhenAll`, `CancellationToken`, `IAsyncEnumerable`.
+  Path: `esercizi/AsyncAwaitDashboard/`.
 
 *(Aggiungi qui un bullet per ogni nuovo esercizio con tema e path.)*
 
