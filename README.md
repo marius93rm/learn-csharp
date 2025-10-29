@@ -15,11 +15,10 @@ learn-csharp/
 │   ├── OOP_esercizio/
 │   └── PomodoroExercise/
 ├── slide/                  # materiale teorico in PDF (propedeutici, OOP, SOLID, async, TDD…)
-├── soluzioni/              # eventuali soluzioni complete degli esercizi
 └── README.md               # questo file introduttivo
 ```
 
-> Convenzione nomi: ogni esercizio include un **README dedicato**, sorgenti nella sottocartella `src/`, eventuali `tests/` e spesso una cartella `soluzione/` o l’equivalente in `soluzioni/`.
+> Convenzione nomi: ogni esercizio include un **README dedicato**, sorgenti nella sottocartella `src/`, eventuali `tests/` e spesso una cartella `soluzione/` con una possibile implementazione completa.
 
 ## Requisiti
 

@@ -5,17 +5,18 @@ Questa cartella contiene una possibile implementazione completa dell'esercizio T
 ## Struttura della soluzione
 
 ```
-soluzioni/
+esercizi/
   GestoreMagazzino.TDD/
-    GestoreMagazzino.TDD.sln
-    src/
-      GestoreMagazzino.csproj
-      Inventario.cs
-      Prodotto.cs
-      INotificatoreMagazzino.cs
-    tests/
-      GestoreMagazzino.Tests.csproj
-      InventarioTests.cs
+    soluzione/
+      GestoreMagazzino.TDD.sln
+      src/
+        GestoreMagazzino.csproj
+        Inventario.cs
+        Prodotto.cs
+        INotificatoreMagazzino.cs
+      tests/
+        GestoreMagazzino.Tests.csproj
+        InventarioTests.cs
 ```
 
 - **`GestoreMagazzino.TDD.sln`**: soluzione Visual Studio che include il progetto di libreria (`src`) e quello di test (`tests`).
@@ -53,7 +54,7 @@ Il comando ripristinerà i pacchetti (xUnit, Moq, coverlet) e verificherà tutti
 
 ## Come riutilizzare la soluzione
 
-- Copia la cartella `soluzioni/GestoreMagazzino.TDD` accanto all'esercizio originale per confrontare passo dopo passo la tua implementazione con quella proposta.
+- Copia la cartella `esercizi/GestoreMagazzino.TDD/soluzione` accanto all'esercizio originale per confrontare passo dopo passo la tua implementazione con quella proposta.
 - Utilizza i commenti come guida per spiegare l'esercizio durante workshop o lezioni frontali: ogni blocco di codice richiama le milestone TDD.
 - Personalizza i messaggi di eccezione o aggiungi nuove funzionalità partendo dai test già presenti, espandendo ulteriormente la copertura.
 
