@@ -2,18 +2,24 @@
 
 Materiale completo per studiare e insegnare **C#**: slide, compendi, esercizi guidati con milestone e (dove previsti) test automatici.
 
-## Contenuto
+## Contenuto del repository
 
-* `slide/` — PDF propedeutici e avanzati (C# 1–3, Propedeutico 1–3, Design Pattern/SOLID/IoC/DI, Indice argomenti avanzati).
-* `esercizi/` — raccolta di esercizi a difficoltà crescente.
+```text
+learn-csharp/
+├── esempi/                 # snippet e mini progetti dimostrativi
+│   └── asincrona/          # esempi pratici su async/await
+├── esercizi/               # esercizi guidati con README e milestone
+│   ├── AsyncAwaitDashboard/
+│   ├── GestoreMagazzino.TDD/
+│   ├── OOP_Banca/
+│   ├── OOP_esercizio/
+│   └── PomodoroExercise/
+├── slide/                  # materiale teorico in PDF (propedeutici, OOP, SOLID, async, TDD…)
+├── soluzioni/              # eventuali soluzioni complete degli esercizi
+└── README.md               # questo file introduttivo
+```
 
-  * `PomodoroExercise/` — esercizio su SOLID, repository/persistenza e test.
-  * `AsyncAwaitDashboard/` — dashboard asincrona con `Task`, `async/await`, cancellazione e stream.
-  * *(altri esercizi verranno aggiunti qui con la stessa struttura)*
-* `Compendio Pomodoro C#.pdf` — compendio teorico+pratico d’esempio.
-* `README.md` — questo file.
-
-> Convenzione nomi: ogni esercizio ha una cartella con **README dedicato**, soluzione guidata e, se previsto, **tests**.
+> Convenzione nomi: ogni esercizio include un **README dedicato**, sorgenti nella sottocartella `src/`, eventuali `tests/` e spesso una cartella `soluzione/` o l’equivalente in `soluzioni/`.
 
 ## Requisiti
 
@@ -57,17 +63,15 @@ Materiale completo per studiare e insegnare **C#**: slide, compendi, esercizi gu
 * **DIP first**: dipendi da **interfacce**, inietta implementazioni concrete.
 * **SRP/OCP**: classi piccole, estendi senza modificare.
 
-## Esercizi inclusi (work-in-progress)
+## Esercizi inclusi
 
-* **PomodoroExercise**
-  Focus su: SRP/OCP/ISP/DIP, repository CSV, notifiche, xUnit.
-  Path: `esercizi/PomodoroExercise/` (leggi il README dentro la cartella).
-
-* **AsyncAwaitDashboard**
-  Focus su: `async`/`await`, `Task.WhenAll`, `CancellationToken`, `IAsyncEnumerable`.
-  Path: `esercizi/AsyncAwaitDashboard/`.
-
-*(Aggiungi qui un bullet per ogni nuovo esercizio con tema e path.)*
+| Esercizio | Percorso | Test da implementare | Argomenti trattati | Slide di riferimento |
+|-----------|----------|----------------------|--------------------|----------------------|
+| Pomodoro Focus Timer | `esercizi/PomodoroExercise/` | Completare i TODO in `tests/Pomodoro.Tests/` e mantenere verdi i test xUnit forniti | SOLID, DIP/IoC, repository su file, timer e notifiche | `slide/Design Pattern, SOLID, IoC, DI e Microservizi.pdf` |
+| Async Await Dashboard | `esercizi/AsyncAwaitDashboard/` | Test non forniti di default (facoltativo crearli) | `async/await`, `Task.WhenAll`, `CancellationToken`, `IAsyncEnumerable` | `slide/Async&Await.pdf` |
+| GestoreMagazzino.TDD | `esercizi/GestoreMagazzino.TDD/` | Scrivere i test indicati dai TODO `*.T#` in `tests/InventarioTests.cs` seguendo il ciclo TDD | TDD, SRP, DIP, refactoring, Moq | `slide/TDD.pdf` |
+| Gestione Banca (OOP) | `esercizi/OOP_Banca/` | Aggiornare i test in `tests/Bank.Tests/` sostituendo i TODO [Test] con asserzioni reali | OOP, incapsulamento, ereditarietà, polimorfismo, gestione transazioni | `slide/C# - 2.pdf` |
+| Gestione Studenti (OOP) | `esercizi/OOP_esercizio/` | Rimuovere gli `Skip` e completare i test in `tests/StudenteTests.cs` | OOP di base, liste, ereditarietà opzionale, persistenza CSV | `slide/C# Propedeutico 1.pdf` |
 
 ## Suggerimenti per macOS (VS Code)
 
@@ -92,3 +96,5 @@ Materiale completo per studiare e insegnare **C#**: slide, compendi, esercizi gu
 * Duplica uno scheletro esercizio e adatta obiettivi/milestone.
 * Mantieni la stessa **struttura** e lo **stile dei README**.
 * Se aggiungi slide o compendi, inseriscili in `slide/` con naming coerente.
+
+© 2025 Marius Minia
