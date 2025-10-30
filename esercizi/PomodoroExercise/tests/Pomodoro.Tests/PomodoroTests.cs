@@ -5,11 +5,19 @@ using Pomodoro.App.Persistence;
 using Pomodoro.App.Sessions;
 using Pomodoro.App.Timer;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace Pomodoro.Tests;
 
 public class PomodoroTests
 {
+    private readonly ITestOutputHelper _output;
+
+    public PomodoroTests(ITestOutputHelper output)
+    {
+        _output = output;
+    }
+
     [Fact]
     public async Task TimerService_CountdownAsync_Should_Invoke_Callbacks()
     {
@@ -26,6 +34,8 @@ public class PomodoroTests
 
         ticks.Should().Equal(3, 2, 1);
         completed.Should().BeTrue();
+
+        _output.WriteLine("TimerService_CountdownAsync passed");
     }
 
     [Fact]
@@ -50,6 +60,8 @@ public class PomodoroTests
             session.FocusSeconds == 2 &&
             session.BreakSeconds == 1 &&
             session.StrategyName == "Test");
+
+        _output.WriteLine("Pomodoro_RunAsync passed");
     }
 
     [Fact]
@@ -62,6 +74,8 @@ public class PomodoroTests
         classic.GetDurations().Should().Be((25 * 60, 5 * 60));
         deep.GetDurations().Should().Be((50 * 60, 10 * 60));
         custom.GetDurations().Should().Be((10, 20));
+
+        _output.WriteLine("Strategies durations passed");
     }
 
     [Fact]
@@ -83,6 +97,8 @@ public class PomodoroTests
             var lines = await File.ReadAllLinesAsync(tempFile);
             lines.Should().HaveCount(1);
             lines[0].Should().Contain("1500;300;Classic 25/5");
+
+            _output.WriteLine("CsvSessionRepository append passed");
         }
         finally
         {
