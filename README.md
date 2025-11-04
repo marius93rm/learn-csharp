@@ -6,6 +6,7 @@ Materiale completo per studiare e insegnare **C#**: slide, compendi, esercizi gu
 
 ```text
 learn-csharp/
+├── check.pdf               # scheda riassuntiva per docenti/mentor
 ├── esempi/                 # snippet e mini progetti dimostrativi
 │   └── asincrona/          # esempi pratici su async/await
 ├── esercizi/               # esercizi guidati con README e milestone
@@ -13,8 +14,19 @@ learn-csharp/
 │   ├── GestoreMagazzino.TDD/
 │   ├── OOP_Banca/
 │   ├── OOP_esercizio/
-│   └── PomodoroExercise/
-├── slide/                  # materiale teorico in PDF (propedeutici, OOP, SOLID, async, TDD…)
+│   ├── PomodoroExercise/
+│   ├── design-patterns-todo/
+│   │   ├── Patterns/       # file con i TODO sui pattern GoF + soluzioni dedicate
+│   │   └── Solutions/
+│   ├── design-patterns-todo2/
+│   │   ├── Patterns/
+│   │   └── Solutions/
+│   └── microservices/
+│       ├── Gateway/        # API gateway che orchestra i servizi
+│       ├── OrderService/
+│       ├── Shared/         # DTO e interfacce comuni
+│       └── UserService/
+├── slide/                  # materiale teorico in PDF (propedeutici, OOP, SOLID, pattern, microservizi…)
 └── README.md               # questo file introduttivo
 ```
 
@@ -71,6 +83,9 @@ learn-csharp/
 | GestoreMagazzino.TDD | `esercizi/GestoreMagazzino.TDD/` | Scrivere i test indicati dai TODO `*.T#` in `tests/InventarioTests.cs` seguendo il ciclo TDD | TDD, SRP, DIP, refactoring, Moq | `slide/TDD.pdf` |
 | Gestione Banca (OOP) | `esercizi/OOP_Banca/` | Aggiornare i test in `tests/Bank.Tests/` sostituendo i TODO [Test] con asserzioni reali | OOP, incapsulamento, ereditarietà, polimorfismo, gestione transazioni | `slide/C# - 2.pdf` |
 | Gestione Studenti (OOP) | `esercizi/OOP_esercizio/` | Rimuovere gli `Skip` e completare i test in `tests/StudenteTests.cs` | OOP di base, liste, ereditarietà opzionale, persistenza CSV | `slide/C# Propedeutico 1.pdf` |
+| Design Patterns TODO (parte 1) | `esercizi/design-patterns-todo/` | Verifica manuale eseguendo `dotnet run` e completando i `// TODO` nei file `Patterns/*.cs` | Pattern GoF fondamentali, refactoring, astrazioni | `slide/Design Patterns.pdf` |
+| Design Patterns TODO (parte 2) | `esercizi/design-patterns-todo2/` | Verifica manuale eseguendo `dotnet run` e completando i `// TODO` nei file `Patterns/*.cs` | Pattern GoF avanzati, thread-safety, architetture modulari | `slide/Design Patterns part 2.pdf` |
+| Microservices Playground | `esercizi/microservices/` | Esercizio guidato senza test automatici: seguire i TODO nelle cartelle `Gateway/`, `UserService/`, `OrderService/` | Microservizi, API gateway, DTO condivisi, resilienza, DIP | `slide/Design Pattern, SOLID, IoC, DI e Microservizi.pdf` |
 
 ## Suggerimenti per macOS (VS Code)
 
