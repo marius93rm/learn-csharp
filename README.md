@@ -19,32 +19,68 @@ Materiale completo per studiare e insegnare **C#**: slide, compendi, esercizi gu
 
 ```text
 learn-csharp/
-├── check.pdf               # scheda riassuntiva per docenti/mentor
-├── esempi/                 # snippet e mini progetti dimostrativi
-│   └── asincrona/          # esempi pratici su async/await
-├── esercizi/               # esercizi guidati con README e milestone
-│   ├── AsyncAwaitDashboard/
-│   ├── GestoreMagazzino.TDD/
-│   ├── LogEventiGuidato/
-│   ├── OOP_Banca/
-│   ├── OOP_esercizio/
-│   ├── PomodoroExercise/
-│   ├── ValidazioneModelliGuidato/
-│   ├── design-patterns-todo/
-│   │   ├── Patterns/       # file con i TODO sui pattern GoF + soluzioni dedicate
-│   │   └── Solutions/
-│   ├── design-patterns-todo2/
+├── check.pdf                       # scheda riassuntiva per docenti/mentor
+├── esempi/
+│   └── asincrona/                  # snippet e mini progetti dimostrativi su async/await
+├── esercizi/
+│   ├── AsyncAwaitDashboard/        # dashboard console guidata su async/await
+│   │   ├── README.md
+│   │   ├── src/AsyncAwaitDashboard.App/
+│   │   └── soluzione/
+│   ├── GestoreMagazzino.TDD/       # percorso TDD con test guidati
+│   │   ├── README.md
+│   │   ├── src/
+│   │   ├── tests/
+│   │   └── soluzione/
+│   ├── LogEventiGuidato/           # esercizio a step con progetti console
+│   │   ├── README.md
+│   │   ├── src/
+│   │   └── soluzione/
+│   ├── OOP_Banca/                  # gestione conti con test e soluzione commentata
+│   │   ├── README.md
+│   │   ├── src/
+│   │   ├── tests/
+│   │   └── SoluzioneCommentata/
+│   ├── OOP_esercizio/              # warm-up OOP: classi Studente/Corso
+│   │   ├── README.md, Program.cs, Studente.cs
+│   │   ├── tests/
+│   │   └── soluzione/
+│   ├── PomodoroExercise/           # applicazione console con timer e repository su file
+│   │   ├── README.md + compendio PDF
+│   │   ├── src/
+│   │   ├── tests/
+│   │   └── soluzione/
+│   ├── ValidazioneModelliGuidato/  # percorso a step su attributi e reflection
+│   │   ├── README.md
+│   │   ├── Step1/ … Step4/
+│   │   ├── ValidazioneModelliGuidato.Solution/
+│   │   └── materiale PDF
+│   ├── design-patterns-todo/       # pattern GoF fondamentali con TODO
+│   │   ├── README.md, Program.cs, *.csproj
 │   │   ├── Patterns/
 │   │   └── Solutions/
-│   ├── microservices/
-│   │   ├── Gateway/        # API gateway che orchestra i servizi
+│   ├── design-patterns-todo2/      # pattern avanzati con TODO
+│   │   ├── README.md, Program.cs, *.csproj
+│   │   ├── Patterns/
+│   │   └── Solutions/
+│   ├── microservices/              # microservizi completi con gateway e servizi dedicati
+│   │   ├── README.md + guida PDF
+│   │   ├── Gateway/
+│   │   ├── UserService/
 │   │   ├── OrderService/
-│   │   ├── Shared/         # DTO e interfacce comuni
-│   │   └── UserService/
-│   ├── randomuser-shifts/  # progetto TDD completo con test automatici
-│   └── randomuser-solution/  # soluzione commentata per lo stesso dominio RandomUser
-├── slide/                  # materiale teorico in PDF (propedeutici, OOP, SOLID, pattern, microservizi…)
-└── README.md               # questo file introduttivo
+│   │   ├── Shared/
+│   │   └── Solution/
+│   ├── randomuser-shifts/          # progetto TDD completo con HttpClient fittizio
+│   │   ├── README.md + dominio PDF
+│   │   ├── src/
+│   │   ├── tests/
+│   │   └── randomuser-shifts.sln
+│   └── randomuser-solution/       # soluzione console commentata per RandomUser
+│       ├── README.md
+│       ├── src/
+│       └── RandomUserSolution.sln
+├── slide/                          # materiale teorico in PDF (propedeutici, OOP, SOLID, pattern, microservizi…)
+└── README.md                       # questo file introduttivo
 ```
 
 > Convenzione nomi: ogni esercizio include un **README dedicato**, sorgenti nella sottocartella `src/`, eventuali `tests/` e spesso una cartella `soluzione/` con una possibile implementazione completa.
@@ -120,20 +156,19 @@ Per ottenere una curva di apprendimento graduale, proponiamo la seguente sequenz
 
 ## Esercizi inclusi
 
-| Esercizio | Percorso | Test da implementare | Argomenti trattati | Slide di riferimento |
-|-----------|----------|----------------------|--------------------|----------------------|
-| Pomodoro Focus Timer | `esercizi/PomodoroExercise/` | Completare i TODO in `tests/Pomodoro.Tests/` e mantenere verdi i test xUnit forniti | SOLID, DIP/IoC, repository su file, timer e notifiche | `slide/Design Pattern, SOLID, IoC, DI e Microservizi.pdf` |
-| Async Await Dashboard | `esercizi/AsyncAwaitDashboard/` | Test non forniti di default (facoltativo crearli) | `async/await`, `Task.WhenAll`, `CancellationToken`, `IAsyncEnumerable` | `slide/Async&Await.pdf` |
+| Esercizio | Percorso | Test / verifica | Argomenti trattati | Slide di riferimento |
+|-----------|----------|-----------------|--------------------|----------------------|
+| Pomodoro Focus Timer | `esercizi/PomodoroExercise/` | Completare i TODO in `tests/Pomodoro.Tests/` mantenendo verdi i test xUnit forniti | SOLID, DIP/IoC, repository su file, timer e notifiche | `slide/Design Pattern, SOLID, IoC, DI e Microservizi.pdf` |
+| Async Await Dashboard | `esercizi/AsyncAwaitDashboard/` | Test non forniti (facoltativi): concentrarsi sull'app console guidata | `async/await`, `Task.WhenAll`, `CancellationToken`, `IAsyncEnumerable` | `slide/Async&Await.pdf` |
 | GestoreMagazzino.TDD | `esercizi/GestoreMagazzino.TDD/` | Scrivere i test indicati dai TODO `*.T#` in `tests/InventarioTests.cs` seguendo il ciclo TDD | TDD, SRP, DIP, refactoring, Moq | `slide/TDD.pdf` |
-| Gestione Banca (OOP) | `esercizi/OOP_Banca/` | Aggiornare i test in `tests/Bank.Tests/` sostituendo i TODO [Test] con asserzioni reali | OOP, incapsulamento, ereditarietà, polimorfismo, gestione transazioni | `slide/C# - 2.pdf` |
+| Gestione Banca (OOP) | `esercizi/OOP_Banca/` | Sostituire i TODO `[Fact]` con asserzioni reali in `tests/Bank.Tests/` | OOP, incapsulamento, ereditarietà, polimorfismo, gestione transazioni | `slide/C# - 2.pdf` |
 | Gestione Studenti (OOP) | `esercizi/OOP_esercizio/` | Rimuovere gli `Skip` e completare i test in `tests/StudenteTests.cs` | OOP di base, liste, ereditarietà opzionale, persistenza CSV | `slide/C# Propedeutico 1.pdf` |
 | Log eventi guidato | `esercizi/LogEventiGuidato/` | Verifica manuale step-by-step eseguendo i progetti `src/Step1`…`Step4` | Attributi personalizzati, reflection, generics con vincoli | `slide/Attributi.pdf`, `slide/Reflection, attributi e generics avanzati.pdf` |
-| Validazione modelli guidato | `esercizi/ValidazioneModelliGuidato/` | Verifica manuale completando i TODO negli step `Step1`…`Step4` | Attributi, reflection, interfacce, validatori generici, SOLID | `slide/Attributi.pdf`, `slide/Reflection, attributi e generics avanzati.pdf` |
+| Validazione modelli guidato | `esercizi/ValidazioneModelliGuidato/` | Completare i TODO negli step `Step1`…`Step4` e confrontare con `ValidazioneModelliGuidato.Solution/` | Attributi, reflection, interfacce, validatori generici, SOLID | `slide/Attributi.pdf`, `slide/Reflection, attributi e generics avanzati.pdf` |
 | Design Patterns TODO (parte 1) | `esercizi/design-patterns-todo/` | Verifica manuale eseguendo `dotnet run` e completando i `// TODO` nei file `Patterns/*.cs` | Pattern GoF fondamentali, refactoring, astrazioni | `slide/Design Patterns.pdf` |
 | Design Patterns TODO (parte 2) | `esercizi/design-patterns-todo2/` | Verifica manuale eseguendo `dotnet run` e completando i `// TODO` nei file `Patterns/*.cs` | Pattern GoF avanzati, thread-safety, architetture modulari | `slide/Design Patterns part 2.pdf` |
-| Microservices Playground | `esercizi/microservices/` | Esercizio guidato senza test automatici: seguire i TODO nelle cartelle `Gateway/`, `UserService/`, `OrderService/` | Microservizi, API gateway, DTO condivisi, resilienza, DIP | `slide/Design Pattern, SOLID, IoC, DI e Microservizi.pdf` |
-| RandomUser Shifts (TDD) | `esercizi/randomuser-shifts/` | Portare a verde i test in `tests/RandomUserShifts.Tests/` seguendo l'ordine delle milestone `TODO[#]` | SOLID, pattern (Adapter, Strategy, Repository), HttpClient, TDD avanzato | `slide/Design Pattern, SOLID, IoC, DI e Microservizi.pdf`, `slide/TDD.pdf` |
-
+| Microservices Playground | `esercizi/microservices/` | Esercizio guidato: seguire i TODO nelle cartelle `Gateway/`, `UserService/`, `OrderService/` | Microservizi, API gateway, DTO condivisi, resilienza, DIP | `slide/Design Pattern, SOLID, IoC, DI e Microservizi.pdf` |
+| RandomUser Shifts (TDD) | `esercizi/randomuser-shifts/` | Portare a verde i test in `tests/RandomUserShifts.Tests/` nell'ordine delle milestone `TODO[#]` | SOLID, pattern (Adapter, Strategy, Repository), HttpClient, TDD avanzato | `slide/Design Pattern, SOLID, IoC, DI e Microservizi.pdf`, `slide/TDD.pdf` |
 ### Risorse aggiuntive
 
 * `esercizi/randomuser-solution/` — soluzione console completa e commentata per l'esercizio RandomUser, utile come materiale di studio o confronto.
