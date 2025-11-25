@@ -19,6 +19,10 @@ Materiale completo per studiare e insegnare **C#**: slide, compendi, esercizi gu
 
 ```text
 learn-csharp/
+├── InventoryManager/              # gestionale in memoria per esercitare LINQ avanzato e filtri multi-criterio
+├── LanApiExercise/                # percorso guidato Minimal API + client console che comunicano in LAN
+├── RateLimiter/                   # mini-progetto su SemaphoreSlim e rate limiting asincrono con TODO
+├── RateLimiterSolution/           # soluzione di riferimento completa per il progetto RateLimiter
 ├── check.pdf                       # scheda riassuntiva per docenti/mentor
 ├── esempi/
 │   └── asincrona/                  # snippet e mini progetti dimostrativi su async/await
